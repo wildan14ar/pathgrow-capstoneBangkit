@@ -4,3 +4,4 @@ matplotlib
 tensorflow 
 tensorflowjs 
 scikit-learn
+seaborn
