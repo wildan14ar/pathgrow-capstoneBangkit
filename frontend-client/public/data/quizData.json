@@ -1,0 +1,170 @@
+[
+  {
+    "label": "Matematika - Geometri",
+    "question": "Simak UI 2017 - Kubus ABCDEFGH, berapakah perbandingan volume?",
+    "options": ["1:8", "1:6", "1:12", "1:18", "1:24"],
+    "correctAnswer": "1:12"
+  },
+  {
+    "label": "Matematika - Geometri",
+    "question": "Simak UI 2017 - Lingkaran dengan luas tertentu, tentukan panjang diameter?",
+    "options": ["9", "10", "12", "15", "20"],
+    "correctAnswer": "12"
+  },
+  {
+    "label": "Matematika - Trigonometri",
+    "question": "SBM 2020 - Identitas Trigonometri sin^2(x) + cos^2(x) = ?",
+    "options": ["0", "1", "2", "-1", "½"],
+    "correctAnswer": "1"
+  },
+  {
+    "label": "Matematika - Fungsi",
+    "question": "SBM 2020 - Nilai minimum fungsi f(x) pada interval tertentu?",
+    "options": ["4", "8", "6", "10", "12"],
+    "correctAnswer": "8"
+  },
+  {
+    "label": "Matematika - Kalkulus",
+    "question": "Utul 2019 - Tentukan persamaan garis singgung kurva pada titik tertentu?",
+    "options": ["0", "-1", "-2", "1", "2"],
+    "correctAnswer": "-2"
+  },
+  {
+    "label": "Sejarah - Perang Dunia",
+    "question": "SBM 2018 - Triple Alliance melibatkan negara-negara mana?",
+    "options": [
+      "Jerman, Austria, dan Italia",
+      "Jerman, Inggris, dan Prancis",
+      "Jerman, Austria, dan Rusia",
+      "Italia, Inggris, dan Prancis",
+      "Austria, Rusia, dan Prancis"
+    ],
+    "correctAnswer": "Jerman, Austria, dan Italia"
+  },
+  {
+    "label": "Sejarah - Prasejarah",
+    "question": "Masyarakat Prasejarah menggunakan benda apa untuk pemujaan?",
+    "options": [
+      "Menhir",
+      "Dolmen",
+      "Punden berundak",
+      "Kubur batu",
+      "Sarkofagus"
+    ],
+    "correctAnswer": "Menhir"
+  },
+  {
+    "label": "Sejarah - Revolusi Amerika",
+    "question": "Coercive Act terkait dengan peristiwa apa?",
+    "options": [
+      "Deklarasi Kemerdekaan",
+      "Perang Dunia II",
+      "Peristiwa Boston Tea Party",
+      "Revolusi Amerika",
+      "Perjanjian Versailles"
+    ],
+    "correctAnswer": "Peristiwa Boston Tea Party"
+  },
+  {
+    "label": "Sejarah - Pendudukan Jepang",
+    "question": "Bagaimana Jepang menguasai Indonesia secara resmi?",
+    "options": [
+      "Perang Dunia II",
+      "Serangan Pasifik",
+      "Deklarasi Perang",
+      "Perjanjian Kalijati",
+      "Menyerahnya Belanda tanpa syarat di Kalijati"
+    ],
+    "correctAnswer": "Menyerahnya Belanda tanpa syarat di Kalijati"
+  },
+  {
+    "label": "Sejarah - Kemerdekaan Indonesia",
+    "question": "Apa tujuan utama PPKI yang dibentuk Jepang?",
+    "options": [
+      "Membentuk angkatan perang",
+      "Bangsa Indonesia menyelesaikan perang yang sedang dihadapi",
+      "Memperbaiki ekonomi",
+      "Memastikan kesetiaan bangsa Indonesia",
+      "Menjalankan pemerintahan"
+    ],
+    "correctAnswer": "Bangsa Indonesia menyelesaikan perang yang sedang dihadapi"
+  },
+  {
+    "label": "Fisika - Termodinamika",
+    "question": "SBM 2020 - Berapa massa es yang mencair dalam kalor campuran es dan air?",
+    "options": ["1 kg", "2,25 kg", "3 kg", "4 kg", "5 kg"],
+    "correctAnswer": "2,25 kg"
+  },
+  {
+    "label": "Fisika - Optik",
+    "question": "Prisma Akromatik memiliki sudut bias berapa derajat?",
+    "options": ["50°", "51°", "53°", "54°", "55°"],
+    "correctAnswer": "53°"
+  },
+  {
+    "label": "Fisika - Termodinamika",
+    "question": "Tekanan udara dalam ban meningkat pada suhu berapa?",
+    "options": ["50°C", "52°C", "54°C", "56°C", "58°C"],
+    "correctAnswer": "54°C"
+  },
+  {
+    "label": "Fisika - Dinamika",
+    "question": "Simak UI 2017 - Koefisien restitusi pada tumbukan ke berapa?",
+    "options": ["Ke-1", "Ke-2", "Ke-3", "Ke-4", "Ke-5"],
+    "correctAnswer": "Ke-3"
+  },
+  {
+    "label": "Astronomi - Tata Surya",
+    "question": "Berapa jarak antara planet A dan B dalam satuan R?",
+    "options": ["3,25 R", "3,75 R", "4,31 R", "4,75 R", "5 R"],
+    "correctAnswer": "4,31 R"
+  },
+  {
+    "label": "Kimia - Esterifikasi",
+    "question": "Utul 2019 - Reaksi esterifikasi fenol menghasilkan apa?",
+    "options": [
+      "Fenil propanoat dan air",
+      "Fenil metanoat dan air",
+      "Fenil asetat dan air",
+      "Fenil butanoat dan air",
+      "Fenil format dan air"
+    ],
+    "correctAnswer": "Fenil propanoat dan air"
+  },
+  {
+    "label": "Kimia - Elektrokimia",
+    "question": "Berapa gram NaCl yang digunakan dalam proses elektrolisis?",
+    "options": ["4 gram", "6 gram", "8 gram", "10 gram", "12 gram"],
+    "correctAnswer": "4 gram"
+  },
+  {
+    "label": "Biologi - Ekologi",
+    "question": "Simak UI 2017 - Berapa jumlah energi pada piramida energi?",
+    "options": [
+      "10 kilokalori",
+      "100 kilokalori",
+      "1.000 kilokalori",
+      "10.000 kilokalori",
+      "100.000 kilokalori"
+    ],
+    "correctAnswer": "1.000 kilokalori"
+  },
+  {
+    "label": "Biologi - Arthropoda",
+    "question": "Antena ditemukan pada kelas arthropoda mana?",
+    "options": ["Crustacea", "Myriapoda", "Insekta", "Arachnida", "Chilopoda"],
+    "correctAnswer": "Arachnida"
+  },
+  {
+    "label": "Biologi - Sel",
+    "question": "Apa fungsi utama membran sel?",
+    "options": [
+      "Melindungi sel",
+      "Menyimpan air",
+      "Mengontrol suhu",
+      "Membantu keluar masuknya zat",
+      "Memproduksi energi"
+    ],
+    "correctAnswer": "Membantu keluar masuknya zat"
+  }
+]

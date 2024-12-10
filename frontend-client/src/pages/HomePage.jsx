@@ -1,10 +1,8 @@
-import Navbar from "../components/Navbar";
 import FeatureCard from "../components/FeatureCard";
 
 const HomePage = () => {
   return (
     <>
-      <Navbar />
       <header className="bg-white py-12">
         <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 text-center lg:text-left">

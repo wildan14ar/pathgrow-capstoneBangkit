@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-50">
-      <div className="flex w-4/5 max-w-4xl shadow-lg bg-white rounded-lg">
+    <div className="flex items-center justify-center h-screen bg-gray-50">
+      <div className="flex w-full h-full shadow-lg bg-white">
         <div className="w-1/2 bg-yellow-400 p-10 flex flex-col justify-center">
           <h1 className="text-4xl font-bold text-white mb-4">PathGrow</h1>
           <p className="text-white text-lg mb-6">
