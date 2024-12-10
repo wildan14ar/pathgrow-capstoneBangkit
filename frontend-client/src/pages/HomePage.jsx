@@ -17,11 +17,11 @@ const HomePage = () => {
               field.
             </p>
           </div>
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 lg:text-right">
             <img
-              src="https://via.placeholder.com/400" // Ganti dengan gambar asli
+              src="./intro.png" // Ganti dengan gambar asli
               alt="Hero"
-              className="rounded-lg shadow-md"
+              className="rounded-lg shadow-md bg-orange-500"
             />
           </div>
         </div>
