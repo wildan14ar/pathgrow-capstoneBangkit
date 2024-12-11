@@ -3,14 +3,14 @@
 ### Deploy Backend Server
 
 ```
-cd backend
+cd pathgrow-api
 npm i
 ```
 
 ###  Deploy Frontend Client
 
 ```
-cd client
+cd frontend-client
 npm i
 npm run dev
 ```
