@@ -9,7 +9,7 @@ const Navbar = () => {
         </Link>
         <div>
           <Link to="/login">
-            <button className="bg-green-500 text-white px-4 py-2 rounded-md">Sign In</button>
+            <button className="text-white px-4 py-2 rounded-md" style={{backgroundColor: '#04AF09'}}>Sign In</button>
           </Link>
         </div>
       </div>

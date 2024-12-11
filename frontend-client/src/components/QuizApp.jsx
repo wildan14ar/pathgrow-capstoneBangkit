@@ -77,7 +77,7 @@ const QuizApp = () => {
       <div style={{ padding: "20px", flex: 1 }}>
         <div className="flex justify-between">
           <h2>Soal {currentQuestionIndex + 1} dari {quizData.length}</h2>
-          <h2 style={{ color: "#4CAF50" }}>{quizData[currentQuestionIndex]?.label}</h2>
+          <h2 style={{ color: "#04AF09" }}>{quizData[currentQuestionIndex]?.label}</h2>
         </div>
         <p>{quizData[currentQuestionIndex]?.question}</p>
         <div>
@@ -103,7 +103,7 @@ const QuizApp = () => {
             onClick={handlePreviousQuestion}
             disabled={currentQuestionIndex === 0}
             style={{
-              backgroundColor: currentQuestionIndex === 0 ? "#E0E0E0" : "#4CAF50",
+              backgroundColor: currentQuestionIndex === 0 ? "#E0E0E0" : "#04AF09",
               color: currentQuestionIndex === 0 ? "#9E9E9E" : "#FFF",
               padding: "10px 20px",
               border: "none",
@@ -117,7 +117,7 @@ const QuizApp = () => {
             <button
               onClick={handleSubmit}
               style={{
-                backgroundColor: "#4CAF50",
+                backgroundColor: "#04AF09",
                 color: "#FFF",
                 padding: "10px 20px",
                 border: "none",
@@ -132,7 +132,7 @@ const QuizApp = () => {
               onClick={handleNextQuestion}
               disabled={!selectedOption}
               style={{
-                backgroundColor: !selectedOption ? "#E0E0E0" : "#4CAF50",
+                backgroundColor: !selectedOption ? "#E0E0E0" : "#04AF09",
                 color: !selectedOption ? "#9E9E9E" : "#FFF",
                 padding: "10px 20px",
                 border: "none",
