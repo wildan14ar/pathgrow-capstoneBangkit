@@ -19,7 +19,8 @@ const HomePage = () => {
             <img
               src="./intro.png" // Ganti dengan gambar asli
               alt="Hero"
-              className="rounded-lg shadow-md bg-orange-500"
+              className="rounded-lg shadow-md"
+              style={{backgroundColor: '#F4CA44'}}
             />
           </div>
         </div>

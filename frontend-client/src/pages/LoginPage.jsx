@@ -22,7 +22,7 @@ const LoginPage = () => {
   return (
     <div className="flex items-center justify-center h-screen bg-gray-50">
       <div className="flex w-full h-full shadow-lg bg-white">
-        <div className="w-1/2 bg-yellow-400 p-10 flex flex-col justify-center">
+        <div className="w-1/2 p-10 flex flex-col justify-center" style={{backgroundColor: '#F4CA44'}}>
           <h1 className="text-4xl font-bold text-white mb-4">PathGrow</h1>
           <p className="text-white text-lg mb-6">
             A platform designed to provide learning experiences tailored to
@@ -52,7 +52,7 @@ const LoginPage = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button className="bg-green-500 text-white py-2 rounded-md">
+            <button className="text-white py-2 rounded-md" style={{backgroundColor: '#04AF09'}}>
               Sign In
             </button>
           </form>
