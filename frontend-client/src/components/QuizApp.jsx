@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const QuizApp = () => {
   const [quizData, setQuizData] = useState([]);
@@ -114,7 +115,8 @@ const QuizApp = () => {
             Sebelumnya
           </button>
           {currentQuestionIndex + 1 === quizData.length ? (
-            <button
+            <Link to="/result">
+              <button
               onClick={handleSubmit}
               style={{
                 backgroundColor: "#04AF09",
@@ -126,7 +128,9 @@ const QuizApp = () => {
               }}
             >
               Selesai
-            </button>
+              </button>
+            </Link>
+            
           ) : (
             <button
               onClick={handleNextQuestion}
