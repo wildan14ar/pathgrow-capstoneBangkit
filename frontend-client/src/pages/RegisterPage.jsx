@@ -1,6 +1,25 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import api from "../services/api"; // Menggunakan Axios instance
 
 const RegisterPage = () => {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await api.post("/register", { name, email, password });
+      console.log(response.data); // Debug response
+      navigate("/login"); // Arahkan ke halaman login setelah registrasi berhasil
+    } catch (err) {
+      setError(err.response?.data?.error || "Failed to register");
+    }
+  };
+
   return (
     <div className="flex items-center justify-center h-screen bg-gray-50">
       <div className="flex w-full h-full shadow-lg bg-white">
@@ -18,21 +37,28 @@ const RegisterPage = () => {
         </div>
         <div className="w-1/2 p-10 flex flex-col justify-center">
           <h2 className="text-2xl font-bold text-center mb-6">Sign Up</h2>
-          <form className="flex flex-col space-y-4">
+          {error && <p className="text-red-500 text-center">{error}</p>}
+          <form onSubmit={handleRegister} className="flex flex-col space-y-4">
             <input
               type="email"
               placeholder="Email"
               className="border rounded-lg px-4 py-2"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <input
               type="text"
               placeholder="Username"
               className="border rounded-lg px-4 py-2"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
             <input
               type="password"
               placeholder="Password"
               className="border rounded-lg px-4 py-2"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <button className="text-white py-2 rounded-md" style={{backgroundColor: '#04AF09'}}>
               Sign Up
