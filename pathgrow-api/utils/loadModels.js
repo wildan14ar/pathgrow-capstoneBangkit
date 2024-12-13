@@ -3,7 +3,7 @@ const tf = require('@tensorflow/tfjs-node');
 // Fungsi untuk memuat model TensorFlow
 const loadCareerModel = async () => {
     try {
-        const model = await tf.loadLayersModel('file://career_model/model.json');
+        const model = await tf.loadModel('file://career_model/model.json');
         console.log('Career model successfully loaded.');
         return model;
     } catch (error) {

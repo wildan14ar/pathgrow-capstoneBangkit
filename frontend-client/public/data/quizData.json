@@ -1,12 +1,12 @@
 [
   {
-    "label": "Matematika - Geometri",
+    "label": "Math",
     "question": "Simak UI 2017 - Kubus ABCDEFGH, berapakah perbandingan volume?",
     "options": ["1:8", "1:6", "1:12", "1:18", "1:24"],
     "correctAnswer": "1:12"
   },
   {
-    "label": "Matematika - Geometri",
+    "label": "Math",
     "question": "Simak UI 2017 - Lingkaran dengan luas tertentu, tentukan panjang diameter?",
     "options": ["9", "10", "12", "15", "20"],
     "correctAnswer": "12"
@@ -30,7 +30,7 @@
     "correctAnswer": "-2"
   },
   {
-    "label": "Sejarah - Perang Dunia",
+    "label": "History",
     "question": "SBM 2018 - Triple Alliance melibatkan negara-negara mana?",
     "options": [
       "Jerman, Austria, dan Italia",
@@ -42,7 +42,7 @@
     "correctAnswer": "Jerman, Austria, dan Italia"
   },
   {
-    "label": "Sejarah - Prasejarah",
+    "label": "History",
     "question": "Masyarakat Prasejarah menggunakan benda apa untuk pemujaan?",
     "options": [
       "Menhir",
