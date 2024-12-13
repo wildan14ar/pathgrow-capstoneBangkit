@@ -12,19 +12,19 @@
     "correctAnswer": "12"
   },
   {
-    "label": "Matematika - Trigonometri",
+    "label": "Math",
     "question": "SBM 2020 - Identitas Trigonometri sin^2(x) + cos^2(x) = ?",
     "options": ["0", "1", "2", "-1", "½"],
     "correctAnswer": "1"
   },
   {
-    "label": "Matematika - Fungsi",
+    "label": "Math",
     "question": "SBM 2020 - Nilai minimum fungsi f(x) pada interval tertentu?",
     "options": ["4", "8", "6", "10", "12"],
     "correctAnswer": "8"
   },
   {
-    "label": "Matematika - Kalkulus",
+    "label": "Math",
     "question": "Utul 2019 - Tentukan persamaan garis singgung kurva pada titik tertentu?",
     "options": ["0", "-1", "-2", "1", "2"],
     "correctAnswer": "-2"
@@ -54,7 +54,7 @@
     "correctAnswer": "Menhir"
   },
   {
-    "label": "Sejarah - Revolusi Amerika",
+    "label": "History",
     "question": "Coercive Act terkait dengan peristiwa apa?",
     "options": [
       "Deklarasi Kemerdekaan",
@@ -66,7 +66,7 @@
     "correctAnswer": "Peristiwa Boston Tea Party"
   },
   {
-    "label": "Sejarah - Pendudukan Jepang",
+    "label": "History",
     "question": "Bagaimana Jepang menguasai Indonesia secara resmi?",
     "options": [
       "Perang Dunia II",
@@ -78,7 +78,7 @@
     "correctAnswer": "Menyerahnya Belanda tanpa syarat di Kalijati"
   },
   {
-    "label": "Sejarah - Kemerdekaan Indonesia",
+    "label": "History",
     "question": "Apa tujuan utama PPKI yang dibentuk Jepang?",
     "options": [
       "Membentuk angkatan perang",
@@ -90,37 +90,37 @@
     "correctAnswer": "Bangsa Indonesia menyelesaikan perang yang sedang dihadapi"
   },
   {
-    "label": "Fisika - Termodinamika",
+    "label": "Physics",
     "question": "SBM 2020 - Berapa massa es yang mencair dalam kalor campuran es dan air?",
     "options": ["1 kg", "2,25 kg", "3 kg", "4 kg", "5 kg"],
     "correctAnswer": "2,25 kg"
   },
   {
-    "label": "Fisika - Optik",
+    "label": "Physics",
     "question": "Prisma Akromatik memiliki sudut bias berapa derajat?",
     "options": ["50°", "51°", "53°", "54°", "55°"],
     "correctAnswer": "53°"
   },
   {
-    "label": "Fisika - Termodinamika",
+    "label": "Physics",
     "question": "Tekanan udara dalam ban meningkat pada suhu berapa?",
     "options": ["50°C", "52°C", "54°C", "56°C", "58°C"],
     "correctAnswer": "54°C"
   },
   {
-    "label": "Fisika - Dinamika",
+    "label": "Physics",
     "question": "Simak UI 2017 - Koefisien restitusi pada tumbukan ke berapa?",
     "options": ["Ke-1", "Ke-2", "Ke-3", "Ke-4", "Ke-5"],
     "correctAnswer": "Ke-3"
   },
   {
-    "label": "Astronomi - Tata Surya",
+    "label": "Geography",
     "question": "Berapa jarak antara planet A dan B dalam satuan R?",
     "options": ["3,25 R", "3,75 R", "4,31 R", "4,75 R", "5 R"],
     "correctAnswer": "4,31 R"
   },
   {
-    "label": "Kimia - Esterifikasi",
+    "label": "Chemistry",
     "question": "Utul 2019 - Reaksi esterifikasi fenol menghasilkan apa?",
     "options": [
       "Fenil propanoat dan air",
@@ -132,13 +132,13 @@
     "correctAnswer": "Fenil propanoat dan air"
   },
   {
-    "label": "Kimia - Elektrokimia",
+    "label": "Chemistry",
     "question": "Berapa gram NaCl yang digunakan dalam proses elektrolisis?",
     "options": ["4 gram", "6 gram", "8 gram", "10 gram", "12 gram"],
     "correctAnswer": "4 gram"
   },
   {
-    "label": "Biologi - Ekologi",
+    "label": "Biology",
     "question": "Simak UI 2017 - Berapa jumlah energi pada piramida energi?",
     "options": [
       "10 kilokalori",
@@ -150,13 +150,13 @@
     "correctAnswer": "1.000 kilokalori"
   },
   {
-    "label": "Biologi - Arthropoda",
+    "label": "Biology",
     "question": "Antena ditemukan pada kelas arthropoda mana?",
     "options": ["Crustacea", "Myriapoda", "Insekta", "Arachnida", "Chilopoda"],
     "correctAnswer": "Arachnida"
   },
   {
-    "label": "Biologi - Sel",
+    "label": "Biology",
     "question": "Apa fungsi utama membran sel?",
     "options": [
       "Melindungi sel",
@@ -166,5 +166,17 @@
       "Memproduksi energi"
     ],
     "correctAnswer": "Membantu keluar masuknya zat"
+  },
+  {
+    "label": "English",
+    "question": "Paragraph preceding the text will probably discuss about?",
+    "options": [
+      "types of vitamins which are good for our health",
+      "the danger of insufficiency of vitamin D in humn body",
+      "vitamin D and its benefits to our health",
+      "the danger of vitamin deficiency to our healtht",
+      "the relation between skin cancer and vitamin D deficiency"
+    ],
+    "correctAnswer": "vitamin D and its benefits to our health"
   }
 ]

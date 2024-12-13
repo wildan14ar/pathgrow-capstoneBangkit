@@ -2,6 +2,7 @@ import os
 import pandas as pd
 from flask import Flask, request, jsonify
 from tensorflow.keras.models import load_model
+from flask_cors import CORS
 
 # Inisialisasi Flask
 app = Flask(__name__)
@@ -19,6 +20,8 @@ X_train_columns = [
     'chemistry_score', 'biology_score', 'english_score', 'geography_score',
     'part_time_job', 'extracurricular_activities', 'average_score'
 ]
+
+CORS(app)
 
 @app.route('/predict', methods=['POST'])
 def predict():

@@ -1,9 +1,10 @@
 flask
+flask-cors
 pandas 
 numpy 
 matplotlib 
-tensorflow 
+tensorflow==2.18.0 
 tensorflowjs 
-scikit-learn
+scikit-learn==1.5.2
 seaborn
 openpyxl
