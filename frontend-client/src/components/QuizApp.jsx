@@ -132,6 +132,7 @@ const QuizApp = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(dataToSend),
+        mode: "no-cors", // Tambahkan mode ini
       });
 
       const data = await response.json();

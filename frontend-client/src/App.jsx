@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import QuizPage from "./pages/QuizPage";
+import ResultPage from "./pages/ResultPage";
 import ProtectedRoute from "./middleware/ProtectedRoute";
 
 const AppContent = () => {
@@ -26,10 +27,15 @@ const AppContent = () => {
           }
         />
         <Route path="/quiz" element={
-          // <ProtectedRoute>
+           // <ProtectedRoute>
             <QuizPage />
-          // </ProtectedRoute>
+           // </ProtectedRoute>
         } />
+        <Route path="/result" element={
+          // <ProtectedRoute>
+            <ResultPage />
+          // </ProtectedRoute>
+          } />
       </Routes>
     </>
   );
