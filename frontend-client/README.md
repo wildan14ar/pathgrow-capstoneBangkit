@@ -11,20 +11,20 @@ This is how the website should look
 
 Landing Page
 
-![LandingPage](img/LandingPage.png)
+![LandingPage](src/img/LandingPage.png)
 
 Sign Up
 
-![SignUpPage](img/SignUpPage.png)
+![SignUpPage](src/img/SignUpPage.png)
 
 Sign In
 
-![SignInPage](img/SignInPage.png)
+![SignInPage](src/img/SignInPage.png)
 
 Quiz Page
 
-![QuizPersonalInfo](img/QuizPersonalInfo.png)
+![QuizPersonalInfo](src/img/QuizPersonalInfo.png)
 
-![QuizQuestion](img/QuizQuestion.png)
+![QuizQuestion](src/img/QuizQuestion.png)
 
-![QuizResult](img/QuizResult.png)
+![QuizResult](src/img/QuizResult.png)
