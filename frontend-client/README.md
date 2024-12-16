@@ -6,3 +6,25 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+This is how the website should look
+
+Landing Page
+
+![LandingPage](img/LandingPage.png)
+
+Sign Up
+
+![SignUpPage](img/SignUpPage.png)
+
+Sign In
+
+![SignInPage](img/SignInPage.png)
+
+Quiz Page
+
+![QuizPersonalInfo](img/QuizPersonalInfo.png)
+
+![QuizQuestion](img/QuizQuestion.png)
+
+![QuizResult](img/QuizResult.png)
