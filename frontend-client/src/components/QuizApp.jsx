@@ -11,14 +11,13 @@ const QuizApp = () => {
   const [prediction, setPrediction] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [personalInfo, setPersonalInfo] = useState({
-    gender: 1,
+    gender: 1, // 0: Male, 1: Female
     absence_days: 3,
     weekly_self_study_hours: 10,
-    part_time_job: 0,
-    extracurricular_activities: 1,
+    part_time_job: 0, // 0: False, 1: True
+    extracurricular_activities: 1, // 0: False, 1: True
   });
 
-  // Fetch quiz data from local JSON
   useEffect(() => {
     const fetchQuizData = async () => {
       try {
@@ -32,19 +31,16 @@ const QuizApp = () => {
     fetchQuizData();
   }, []);
 
-  // Handle changes in personal info form
   const handlePersonalInfoChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setPersonalInfo((prev) => ({
       ...prev,
-      [name]: Number(value),
+      [name]: type === "checkbox" ? (checked ? 1 : 0) : Number(value),
     }));
   };
 
-  // Start quiz
   const startQuiz = () => setIsEditingPersonalInfo(false);
 
-  // Handle option selection
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
     setAnsweredQuestions((prev) => ({
@@ -53,13 +49,11 @@ const QuizApp = () => {
     }));
   };
 
-  // Navigate to the next question
   const handleNextQuestion = () => {
     setCurrentQuestionIndex((prev) => prev + 1);
     setSelectedOption(answeredQuestions[currentQuestionIndex + 1] || null);
   };
 
-  // Navigate to the previous question
   const handlePreviousQuestion = () => {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex((prev) => prev - 1);
@@ -67,26 +61,6 @@ const QuizApp = () => {
     }
   };
 
-  // Calculate percentages for each category
-  const calculateCategoryPercentages = (categoryScores, categoryTotals) => {
-    const percentages = {};
-    Object.keys(categoryTotals).forEach((category) => {
-      const correctAnswers = categoryScores[category] || 0;
-      const totalQuestions = categoryTotals[category] || 1; // Avoid division by zero
-      percentages[category] = Math.round((correctAnswers / totalQuestions) * 100);
-    });
-    return percentages;
-  };
-
-  // Calculate average score
-  const calculateAverageScore = (percentages) => {
-    const categories = Object.values(percentages);
-    if (categories.length === 0) return 0;
-    const totalPercentage = categories.reduce((sum, value) => sum + value, 0);
-    return Math.round(totalPercentage / categories.length);
-  };
-
-  // Submit quiz and send data to backend
   const handleSubmit = async () => {
     if (Object.keys(answeredQuestions).length !== quizData.length) {
       setShowPopup(true);
@@ -97,7 +71,6 @@ const QuizApp = () => {
     const categoryScores = {};
     const categoryTotals = {};
 
-    // Calculate scores for each category
     quizData.forEach((question, index) => {
       const userAnswer = answeredQuestions[index];
       if (userAnswer === question.correctAnswer) {
@@ -106,6 +79,23 @@ const QuizApp = () => {
       }
       categoryTotals[question.label] = (categoryTotals[question.label] || 0) + 1;
     });
+
+    const calculateCategoryPercentages = (categoryScores, categoryTotals) => {
+      const percentages = {};
+      Object.keys(categoryTotals).forEach((category) => {
+        const correctAnswers = categoryScores[category] || 0;
+        const totalQuestions = categoryTotals[category] || 1;
+        percentages[category] = Math.round((correctAnswers / totalQuestions) * 100);
+      });
+      return percentages;
+    };
+
+    const calculateAverageScore = (percentages) => {
+      const categories = Object.values(percentages);
+      if (categories.length === 0) return 0;
+      const totalPercentage = categories.reduce((sum, value) => sum + value, 0);
+      return Math.round(totalPercentage / categories.length);
+    };
 
     const categoryPercentages = calculateCategoryPercentages(categoryScores, categoryTotals);
     const averageScore = calculateAverageScore(categoryPercentages);
@@ -132,15 +122,19 @@ const QuizApp = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(dataToSend),
-        mode: "no-cors", // Tambahkan mode ini
       });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
 
       const data = await response.json();
       console.log("Backend response:", data);
+
       if (data.success) {
         setPrediction(data.prediction);
       } else {
-        console.error("Backend error:", data);
+        console.error("Backend error:", data.error);
       }
     } catch (error) {
       console.error("Failed to fetch prediction:", error);
@@ -150,32 +144,60 @@ const QuizApp = () => {
     }
   };
 
-  // Handle question jump
-  const handleQuestionJump = (index) => {
-    setCurrentQuestionIndex(index);
-    setSelectedOption(answeredQuestions[index] || null);
-  };
-
   if (isEditingPersonalInfo) {
     return (
       <div style={{ maxWidth: "500px", margin: "0 auto", padding: "20px", fontFamily: "Arial, sans-serif", background: "#f0f0f0", borderRadius: "10px" }}>
         <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Personal Information</h2>
         <div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
-          {Object.keys(personalInfo).map((key) => (
-            <div key={key}>
-              <label style={{ marginBottom: "5px", display: "block" }}>
-                {key.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}:
-              </label>
-              <input
-                type="number"
-                name={key}
-                value={personalInfo[key]}
-                onChange={handlePersonalInfoChange}
-                style={{ width: "100%", padding: "10px", borderRadius: "5px", border: "1px solid #ccc" }}
-                min="0"
-              />
-            </div>
-          ))}
+          <div>
+            <label style={{ marginBottom: "5px", display: "block" }}>Gender:</label>
+            <select
+              name="gender"
+              value={personalInfo.gender}
+              onChange={handlePersonalInfoChange}
+              style={{ width: "100%", padding: "10px", borderRadius: "5px", border: "1px solid #ccc" }}
+            >
+              <option value={0}>Male</option>
+              <option value={1}>Female</option>
+            </select>
+          </div>
+          <div>
+            <label style={{ marginBottom: "5px", display: "block" }}>Part Time Job:</label>
+            <input
+              type="checkbox"
+              name="part_time_job"
+              checked={personalInfo.part_time_job === 1}
+              onChange={handlePersonalInfoChange}
+              style={{ width: "20px", height: "20px" }}
+            />
+          </div>
+          <div>
+            <label style={{ marginBottom: "5px", display: "block" }}>Extracurricular Activities:</label>
+            <input
+              type="checkbox"
+              name="extracurricular_activities"
+              checked={personalInfo.extracurricular_activities === 1}
+              onChange={handlePersonalInfoChange}
+              style={{ width: "20px", height: "20px" }}
+            />
+          </div>
+          {Object.keys(personalInfo)
+            .filter((key) => !["gender", "part_time_job", "extracurricular_activities"].includes(key))
+            .map((key) => (
+              <div key={key}>
+                <label style={{ marginBottom: "5px", display: "block" }}>
+                  {key.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}:
+                </label>
+                <input
+                  type="number"
+                  name={key}
+                  value={personalInfo[key]}
+                  onChange={handlePersonalInfoChange}
+                  style={{ width: "100%", padding: "10px", borderRadius: "5px", border: "1px solid #ccc" }}
+                  min="0"
+                />
+              </div>
+            ))}
           <button
             onClick={startQuiz}
             style={{
@@ -201,7 +223,7 @@ const QuizApp = () => {
         {isLoading ? (
           <div style={{ textAlign: "center", fontSize: "20px" }}>Loading prediction...</div>
         ) : (
-          <>
+          <div>
             <h1>Quiz Results</h1>
             <h2>Career Prediction:</h2>
             {prediction && (
@@ -236,7 +258,7 @@ const QuizApp = () => {
                   ))}
               </div>
             )}
-          </>
+          </div>
         )}
       </div>
     );
@@ -278,7 +300,7 @@ const QuizApp = () => {
         {quizData.map((_, index) => (
           <button
             key={index}
-            onClick={() => handleQuestionJump(index)}
+            onClick={() => setCurrentQuestionIndex(index)}
             style={{
               display: "block",
               padding: "10px",
