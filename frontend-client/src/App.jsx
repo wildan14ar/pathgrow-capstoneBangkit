@@ -27,15 +27,15 @@ const AppContent = () => {
           }
         />
         <Route path="/quiz" element={
-           // <ProtectedRoute>
+          <ProtectedRoute>
             <QuizPage />
-           // </ProtectedRoute>
+          </ProtectedRoute>
         } />
         <Route path="/result" element={
-          // <ProtectedRoute>
+          <ProtectedRoute>
             <ResultPage />
-          // </ProtectedRoute>
-          } />
+          </ProtectedRoute>
+        } />
       </Routes>
     </>
   );
