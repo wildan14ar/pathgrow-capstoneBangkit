@@ -1,11 +1,18 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+<<<<<<< HEAD
 import api from "../services/api"; // Axios instance yang sudah dikonfigurasi
+=======
+import api from "../services/api.js"; // Menggunakan Axios instance
+>>>>>>> 17cfa26291386ca95e74e618b908bd4ba249efec
 
 const RegisterPage = () => {
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
+<<<<<<< HEAD
   const [email, setEmail] = useState("");
+=======
+>>>>>>> 17cfa26291386ca95e74e618b908bd4ba249efec
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -23,6 +30,7 @@ const RegisterPage = () => {
     }
 
     try {
+<<<<<<< HEAD
       const response = await api.post("/auth/register", {
         name,
         username,
@@ -30,6 +38,9 @@ const RegisterPage = () => {
         password,
       });
 
+=======
+      const response = await api.post("/register", { name, username, email, password });
+>>>>>>> 17cfa26291386ca95e74e618b908bd4ba249efec
       console.log(response.data); // Debug response
       navigate("/login"); // Redirect to login page after successful registration
     } catch (err) {
@@ -87,7 +98,24 @@ const RegisterPage = () => {
               className="border rounded-lg px-4 py-2"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+<<<<<<< HEAD
               required
+=======
+            />
+            <input
+              type="text"
+              placeholder="Name"
+              className="border rounded-lg px-4 py-2"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+>>>>>>> 17cfa26291386ca95e74e618b908bd4ba249efec
+            />
+            <input
+              type="text"
+              placeholder="Username"
+              className="border rounded-lg px-4 py-2"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
             <input
               type="password"
