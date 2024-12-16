@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import api from "../services/api"; // Menggunakan Axios instance
+import api from "../services/api.js"; // Menggunakan Axios instance
 
 const RegisterPage = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const RegisterPage = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await api.post("/register", { name, email, password });
+      const response = await api.post("/register", { name, username, email, password });
       console.log(response.data); // Debug response
       navigate("/login"); // Arahkan ke halaman login setelah registrasi berhasil
     } catch (err) {
@@ -48,10 +49,17 @@ const RegisterPage = () => {
             />
             <input
               type="text"
-              placeholder="Username"
+              placeholder="Name"
               className="border rounded-lg px-4 py-2"
               value={name}
               onChange={(e) => setName(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Username"
+              className="border rounded-lg px-4 py-2"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
             <input
               type="password"
