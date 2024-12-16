@@ -25,6 +25,6 @@ Quiz Page
 
 ![QuizPersonalInfo](src/img/QuizPersonalInfo.png)
 
-![QuizQuestion](src/img/QuizQuestion.png)
+![QuizQuestions](src/img/QuizQuestions.png)
 
 ![QuizResult](src/img/QuizResult.png)
