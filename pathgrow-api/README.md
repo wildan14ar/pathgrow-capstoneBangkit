@@ -25,7 +25,7 @@ PORT=xxxx
 
 # MySQL Database Configuration
 DB_HOST=xxxx
-DB_USERNAME=xxxx
+DB_USER=xxxx
 DB_PASSWORD=xxxx
 DB_NAME=xxxx
 
