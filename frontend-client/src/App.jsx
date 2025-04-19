@@ -6,6 +6,7 @@ import RegisterPage from "./pages/RegisterPage";
 import QuizPage from "./pages/QuizPage";
 import ResultPage from "./pages/ResultPage";
 import ProtectedRoute from "./middleware/ProtectedRoute";
+import { CircleSpinner } from "react-spinners-kit";
 
 const AppContent = () => {
   const location = useLocation(); // Get current location
@@ -41,12 +42,26 @@ const AppContent = () => {
   );
 };
 
-const App = () => {
-  return (
-    <Router>
-      <AppContent />
-    </Router>
-  );
-};
+import React from 'react';
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: false,
+    };
+  }
+
+  render() {
+    const { loading } = this.state;
+    return loading ?
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+        <CircleSpinner size={80} color="#686769" loading={loading} />
+      </div> : <Router><AppContent /></Router>;
+  } 
+}
+
+
+
 
 export default App;

@@ -67,6 +67,7 @@ const QuizApp = () => {
       return;
     }
 
+    // eslint-disable-next-line no-unused-vars
     let finalScore = 0;
     const categoryScores = {};
     const categoryTotals = {};
@@ -229,7 +230,7 @@ const QuizApp = () => {
             {prediction && (
               <div>
                 {Object.entries(prediction)
-                  .filter(([_, probability]) => probability > 0)
+                  .filter(([probability]) => probability > 0)
                   .map(([career, probability]) => (
                     <div
                       key={career}

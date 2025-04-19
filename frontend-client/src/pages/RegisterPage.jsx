@@ -40,11 +40,10 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-50">
-      <div className="flex flex-col lg:flex-row w-full max-w-4xl shadow-lg bg-white">
+      <div className="flex flex-col lg:flex-row w-full min-h-screen shadow-lg bg-white">
         {/* Left Section */}
         <div
-          className="w-full lg:w-1/2 p-10 flex flex-col justify-center"
+          className="w-full md:w-[50%] p-10 flex flex-col justify-center"
           style={{ backgroundColor: "#F4CA44" }}
         >
           <h1 className="text-4xl font-bold text-white mb-4">PathGrow</h1>
@@ -60,7 +59,7 @@ const RegisterPage = () => {
         </div>
 
         {/* Right Section */}
-        <div className="w-full lg:w-1/2 p-10 flex flex-col justify-center">
+        <div className="w-full md:w-[50%] p-10 flex flex-col justify-center">
           <h2 className="text-2xl font-bold text-center mb-6">Sign Up</h2>
           {error && <p className="text-red-500 text-center">{error}</p>}
 
@@ -71,14 +70,6 @@ const RegisterPage = () => {
               className="border rounded-lg px-4 py-2"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              required
-            />
-            <input
-              type="text"
-              placeholder="Username"
-              className="border rounded-lg px-4 py-2"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
               required
             />
             <input
@@ -119,7 +110,6 @@ const RegisterPage = () => {
           </form>
         </div>
       </div>
-    </div>
   );
 };
 
