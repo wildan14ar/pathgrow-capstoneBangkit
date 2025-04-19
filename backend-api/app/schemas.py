@@ -1,12 +1,14 @@
 from pydantic import BaseModel
 
 class RegisterSchema(BaseModel):
-    name: str
+    full_name: str
+    username: str
     email: str
     password: str
 
 class LoginSchema(BaseModel):
-    email: str
+    # Allow login by email or username
+    identifier: str  # user email or username
     password: str
 
 class PredictionInput(BaseModel):

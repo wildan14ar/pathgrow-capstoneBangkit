@@ -5,10 +5,11 @@ from app.database import Base
 class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String)
+    full_name = Column(String)
+    username = Column(String, unique=True, index=True)
     email = Column(String, unique=True)
     password = Column(String)
-    role = Column(String, default="user")
+    role = Column(String, default="user")  # Sudah ada
     predictions = relationship("Prediction", back_populates="user")
 
 class Prediction(Base):
